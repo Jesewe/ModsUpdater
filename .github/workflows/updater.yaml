@@ -28,7 +28,7 @@ jobs:
 
       - name: Generate output.json
         run: |
-          python main.py --mods-url https://mods-guerra.netlify.app/mods.json --full-output output.json
+          python main.py --mods-url https://mods-guerra.netlify.app/mods.json --full-output -o output.json
 
       - name: Upload output.json artifact
         uses: actions/upload-artifact@v4
