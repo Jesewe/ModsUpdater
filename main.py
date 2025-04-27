@@ -41,7 +41,7 @@ def get_latest_mod_info(channel: str, owner: str, package: str) -> Dict:
     resp.raise_for_status()
     data = resp.json()
 
-    # Extract package metadata
+    # Extract latest release data
     latest = data.get("latest", {})
     version = latest.get("version_number")
     raw_date = data.get("date_updated")
@@ -52,16 +52,20 @@ def get_latest_mod_info(channel: str, owner: str, package: str) -> Dict:
         formatted_date = raw_date
 
     # Additional fields for full output
-    description = data.get("description", "")
-    icon_url = data.get("icon_url", "")
-    full_name = data.get("full_name", "")
+    description = latest.get("description", "")
+    icon_url = latest.get("icon", "")
+    full_name = latest.get("full_name", "")
 
-    download_url = f"https://thunderstore.io/c/{channel}/p/{owner}/{package}/"
+    # Correct download URL from API
+    download_url = latest.get("download_url")
+    # Package page URL from API data or fallback
+    page_url = data.get("package_url") or f"https://thunderstore.io/c/{channel}/p/{owner}/{package}/"
 
     return {
         "name": full_name or f"{owner}/{package}",
         "description": description,
-        "url": download_url,
+        "url": page_url,
+        "download_url": download_url,
         "icon_url": icon_url,
         "channel": channel,
         "owner": owner,
@@ -104,11 +108,15 @@ def print_table(updates: List[Dict], full: bool = False):
         return
 
     if full:
-        headers = ["Name", "Description", "URL", "Icon URL", "Channel", "Owner", "Package", "Version", "Date Updated", "Full Name"]
+        headers = [
+            "Name", "Description", "URL", "Download URL", "Icon URL", "Channel",
+            "Owner", "Package", "Version", "Date Updated", "Full Name"
+        ]
         rows = [[
             u.get("name", ""),
             u.get("description", ""),
             u.get("url", ""),
+            u.get("download_url", ""),
             u.get("icon_url", ""),
             u.get("channel", ""),
             u.get("owner", ""),
@@ -119,7 +127,12 @@ def print_table(updates: List[Dict], full: bool = False):
         ] for u in updates]
     else:
         headers = ["Name", "Version", "Date Updated", "URL"]
-        rows = [[u.get("name", ""), u.get("version", ""), u.get("date_updated", ""), u.get("url", "")] for u in updates]
+        rows = [[
+            u.get("name", ""),
+            u.get("version", ""),
+            u.get("date_updated", ""),
+            u.get("url", "")
+        ] for u in updates]
 
     col_widths = [max(len(headers[i]), max(len(str(row[i])) for row in rows)) for i in range(len(headers))]
     border = "+" + "+".join("-" * (w + 2) for w in col_widths) + "+"
@@ -134,31 +147,27 @@ def print_table(updates: List[Dict], full: bool = False):
         print(line)
     print(border)
 
-def send_telegram(updates: List[Dict]):
+def send_telegram(received: int, total: int):
     token = os.getenv('TELEGRAM_BOT_TOKEN')
     chat_id = os.getenv('TELEGRAM_CHAT_ID')
     if not token or not chat_id:
         logger.error("Telegram token or chat_id not set in environment")
         return
     base_url = f"https://api.telegram.org/bot{token}/sendMessage"
-    for u in updates:
-        text = (f"Название мода: {u['name']}\n"
-                f"Последнее обновление: {u['date_updated']}\n"
-                f"Ссылка: {u['url']}")
-        payload = {
-            'chat_id': chat_id,
-            'text': text,
-            'disable_web_page_preview': True
-        }
-        try:
-            resp = requests.post(base_url, json=payload, timeout=10)
-            if not resp.ok:
-                logger.error(f"Telegram API error {resp.status_code}: {resp.text}")
-            else:
-                logger.info(f"Sent Telegram message for {u['name']}")
-        except Exception as e:
-            logger.error(f"Error sending Telegram message for {u['name']}: {e}")
-        time.sleep(1)
+    text = f"Здравствуйте, guerra. Информация о модах для R.E.P.O загружена на GitHub. \nПолучено {received} из {total} модов на Thunderstore."
+    payload = {
+        'chat_id': chat_id,
+        'text': text,
+        'disable_web_page_preview': True
+    }
+    try:
+        resp = requests.post(base_url, json=payload, timeout=10)
+        if not resp.ok:
+            logger.error(f"Telegram API error {resp.status_code}: {resp.text}")
+        else:
+            logger.info("Sent Telegram summary message")
+    except Exception as e:
+        logger.error(f"Error sending Telegram message: {e}")
 
 def main():
     parser = argparse.ArgumentParser(description="Получить версию и дату обновления Thunderstore модов.")
@@ -173,13 +182,23 @@ def main():
     )
     parser.add_argument(
         "--send-telegram", action='store_true',
-        help="Отправить результаты в Telegram бот"
+        help="Отправить сводку в Telegram о количестве полученных модов"
     )
     parser.add_argument(
         "--full-output", action='store_true',
-        help="Выводить всю информацию о модах (name, description, url, icon_url, channel, owner, package, version, date_updated, full_name)"
+        help="Выводить всю информацию о модах (name, description, url, download_url, icon_url, channel, owner, package, version, date_updated, full_name)"
     )
     args = parser.parse_args()
+
+    # Fetch initial mod list to count total
+    try:
+        mods_resp = requests.get(args.mods_url, timeout=10)
+        mods_resp.raise_for_status()
+        mods_data = mods_resp.json()
+        total_mods = len(mods_data.get("repo_mods", []))
+    except Exception as e:
+        logger.error(f"Error fetching mod list: {e}")
+        total_mods = 0
 
     updates = fetch_all_updates(args.mods_url)
     print_table(updates, full=args.full_output)
@@ -199,7 +218,7 @@ def main():
         logger.info(f"Results saved to {args.output}")
 
     if args.send_telegram:
-        send_telegram(updates)
+        send_telegram(len(updates), total_mods)
 
 if __name__ == "__main__":
     main()
