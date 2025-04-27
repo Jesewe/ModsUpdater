@@ -5,6 +5,9 @@ on:
   schedule:
     - cron: "0 12 * * *" # Every day at 12:00 UTC
 
+permissions:
+  contents: write
+
 jobs:
   update-mods:
     runs-on: ubuntu-latest
@@ -16,6 +19,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          persist-credentials: true
 
       - name: Set up Python
         uses: actions/setup-python@v4
