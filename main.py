@@ -59,7 +59,7 @@ def get_latest_mod_info(channel: str, owner: str, package: str) -> Dict:
     # Correct download URL from API
     download_url = latest.get("download_url")
     # Package page URL from API data or fallback
-    page_url = data.get("package_url") or f"https://thunderstore.io/c/{channel}/p/{owner}/{package}/"
+    page_url = f"https://thunderstore.io/c/{channel}/p/{owner}/{package}/"
 
     return {
         "name": full_name or f"{owner}/{package}",
