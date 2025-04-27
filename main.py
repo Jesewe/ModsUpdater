@@ -41,6 +41,7 @@ def get_latest_mod_info(channel: str, owner: str, package: str) -> Dict:
     resp.raise_for_status()
     data = resp.json()
 
+    # Extract package metadata
     latest = data.get("latest", {})
     version = latest.get("version_number")
     raw_date = data.get("date_updated")
@@ -50,8 +51,26 @@ def get_latest_mod_info(channel: str, owner: str, package: str) -> Dict:
     except Exception:
         formatted_date = raw_date
 
+    # Additional fields for full output
+    description = data.get("description", "")
+    icon_url = data.get("icon_url", "")
+    full_name = data.get("full_name", "")
+
     download_url = f"https://thunderstore.io/c/{channel}/p/{owner}/{package}/"
-    return {"version": version, "date_updated": formatted_date, "raw_date": raw_date, "url": download_url}
+
+    return {
+        "name": full_name or f"{owner}/{package}",
+        "description": description,
+        "url": download_url,
+        "icon_url": icon_url,
+        "channel": channel,
+        "owner": owner,
+        "package": package,
+        "version": version,
+        "date_updated": formatted_date,
+        "full_name": full_name,
+        "raw_date": raw_date
+    }
 
 def fetch_all_updates(mods_url: str, max_workers: int = 5) -> List[Dict]:
     resp = requests.get(mods_url, timeout=10)
@@ -73,30 +92,45 @@ def fetch_all_updates(mods_url: str, max_workers: int = 5) -> List[Dict]:
             mod_name = futures[future]
             try:
                 info = future.result()
-                results.append({"name": mod_name, **info})
+                results.append(info)
             except Exception as e:
                 logger.error(f"Error fetching {mod_name}: {e}")
     results.sort(key=lambda x: x.get("raw_date", ""), reverse=True)
     return results
 
-def print_table(updates: List[Dict]):
+def print_table(updates: List[Dict], full: bool = False):
     if not updates:
         print(Fore.RED + "No updates found.")
         return
-    headers = ["Name", "Version", "Date Updated", "Download URL"]
-    rows = [[u["name"], u["version"], u["date_updated"], u["url"]] for u in updates]
-    col_widths = [max(len(headers[i]), max(len(row[i]) for row in rows)) for i in range(len(headers))]
+
+    if full:
+        headers = ["Name", "Description", "URL", "Icon URL", "Channel", "Owner", "Package", "Version", "Date Updated", "Full Name"]
+        rows = [[
+            u.get("name", ""),
+            u.get("description", ""),
+            u.get("url", ""),
+            u.get("icon_url", ""),
+            u.get("channel", ""),
+            u.get("owner", ""),
+            u.get("package", ""),
+            u.get("version", ""),
+            u.get("date_updated", ""),
+            u.get("full_name", "")
+        ] for u in updates]
+    else:
+        headers = ["Name", "Version", "Date Updated", "URL"]
+        rows = [[u.get("name", ""), u.get("version", ""), u.get("date_updated", ""), u.get("url", "")] for u in updates]
+
+    col_widths = [max(len(headers[i]), max(len(str(row[i])) for row in rows)) for i in range(len(headers))]
     border = "+" + "+".join("-" * (w + 2) for w in col_widths) + "+"
     print(border)
     header_line = (
-        "| " +
-        " | ".join(Fore.CYAN + headers[i].ljust(col_widths[i]) + Style.RESET_ALL for i in range(len(headers))) +
-        " |"
+        "| " + " | ".join(Fore.CYAN + headers[i].ljust(col_widths[i]) + Style.RESET_ALL for i in range(len(headers))) + " |"
     )
     print(header_line)
     print(border)
     for row in rows:
-        line = "| " + " | ".join(row[i].ljust(col_widths[i]) for i in range(len(row))) + " |"
+        line = "| " + " | ".join(str(row[i]).ljust(col_widths[i]) for i in range(len(row))) + " |"
         print(line)
     print(border)
 
@@ -141,13 +175,25 @@ def main():
         "--send-telegram", action='store_true',
         help="Отправить результаты в Telegram бот"
     )
+    parser.add_argument(
+        "--full-output", action='store_true',
+        help="Выводить всю информацию о модах (name, description, url, icon_url, channel, owner, package, version, date_updated, full_name)"
+    )
     args = parser.parse_args()
 
     updates = fetch_all_updates(args.mods_url)
-    print_table(updates)
+    print_table(updates, full=args.full_output)
 
     if args.output:
-        out = [{k: v for k, v in u.items() if k != 'raw_date'} for u in updates]
+        if args.full_output:
+            out = [{k: v for k, v in u.items() if k != 'raw_date'} for u in updates]
+        else:
+            out = [{
+                'name': u['name'],
+                'version': u['version'],
+                'date_updated': u['date_updated'],
+                'url': u['url']
+            } for u in updates]
         with open(args.output, "w", encoding="utf-8") as f:
             json.dump(out, f, indent=2, ensure_ascii=False)
         logger.info(f"Results saved to {args.output}")

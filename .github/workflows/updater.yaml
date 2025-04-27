@@ -3,7 +3,7 @@ name: "Weekly Mods Update"
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 0 * * 1"
+    - cron: "0 12 * * *" # Every day at 12:00 UTC
 
 jobs:
   update-mods:
@@ -28,10 +28,20 @@ jobs:
 
       - name: Generate output.json
         run: |
-          python main.py --mods-url https://mods-guerra.netlify.app/mods.json --output output.json --send-telegram
+          python main.py --mods-url https://mods-guerra.netlify.app/mods.json --full-output output.json
 
       - name: Upload output.json artifact
         uses: actions/upload-artifact@v4
         with:
           name: mods-output
           path: output.json
+
+      - name: Commit and Push updated output.json
+        run: |
+          git config user.name "jesewescience[bot]"
+          git config user.email "jesewescience[bot]@users.noreply.github.com"
+          git add output.json
+          git commit -m "Auto-update output.json [skip ci]" || echo "No changes to commit"
+          git push origin HEAD:main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
