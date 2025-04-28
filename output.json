@@ -1,5 +1,18 @@
 [
   {
+    "name": "s1ckboy-SteampunkItems-1.1.2",
+    "description": "Adds [6] Valuables and [1] Item",
+    "url": "https://thunderstore.io/c/repo/p/s1ckboy/SteampunkItems/",
+    "download_url": "https://thunderstore.io/package/download/s1ckboy/SteampunkItems/1.1.2/",
+    "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/s1ckboy-SteampunkItems-1.1.2.png",
+    "channel": "repo",
+    "owner": "s1ckboy",
+    "package": "SteampunkItems",
+    "version": "1.1.2",
+    "date_updated": "2025-04-27, 18:57:22",
+    "full_name": "s1ckboy-SteampunkItems-1.1.2"
+  },
+  {
     "name": "RESET-MoreHeadPlus-1.9.6",
     "description": "Adds several more cosmetics to the MoreHead mod such as Nintendo, Sega, Anime and more!.",
     "url": "https://thunderstore.io/c/repo/p/RESET/MoreHeadPlus/",
@@ -102,19 +115,6 @@
     "version": "1.5.5",
     "date_updated": "2025-04-15, 18:32:50",
     "full_name": "Bengimi-BensCosmetics-1.5.5"
-  },
-  {
-    "name": "s1ckboy-SteampunkItems-1.1.1",
-    "description": "Adds [4] Valuables and [1] Item",
-    "url": "https://thunderstore.io/c/repo/p/s1ckboy/SteampunkItems/",
-    "download_url": "https://thunderstore.io/package/download/s1ckboy/SteampunkItems/1.1.1/",
-    "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/s1ckboy-SteampunkItems-1.1.1.png",
-    "channel": "repo",
-    "owner": "s1ckboy",
-    "package": "SteampunkItems",
-    "version": "1.1.1",
-    "date_updated": "2025-04-15, 00:33:52",
-    "full_name": "s1ckboy-SteampunkItems-1.1.1"
   },
   {
     "name": "BULLETBOT-MoreUpgrades-1.4.8",
