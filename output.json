@@ -2,7 +2,7 @@
   {
     "name": "RESET-MoreHeadPlus-1.9.6",
     "description": "Adds several more cosmetics to the MoreHead mod such as Nintendo, Sega, Anime and more!.",
-    "url": "https://thunderstore.io/package/RESET/MoreHeadPlus/",
+    "url": "https://thunderstore.io/c/repo/p/RESET/MoreHeadPlus/",
     "download_url": "https://thunderstore.io/package/download/RESET/MoreHeadPlus/1.9.6/",
     "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/RESET-MoreHeadPlus-1.9.6.png",
     "channel": "repo",
@@ -15,7 +15,7 @@
   {
     "name": "nickklmao-REPOConfig-1.2.2",
     "description": "Edit mod configs in-game!",
-    "url": "https://thunderstore.io/package/nickklmao/REPOConfig/",
+    "url": "https://thunderstore.io/c/repo/p/nickklmao/REPOConfig/",
     "download_url": "https://thunderstore.io/package/download/nickklmao/REPOConfig/1.2.2/",
     "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/nickklmao-REPOConfig-1.2.2.png",
     "channel": "repo",
@@ -28,7 +28,7 @@
   {
     "name": "nickklmao-MenuLib-2.4.1",
     "description": "A library for creating UI!",
-    "url": "https://thunderstore.io/package/nickklmao/MenuLib/",
+    "url": "https://thunderstore.io/c/repo/p/nickklmao/MenuLib/",
     "download_url": "https://thunderstore.io/package/download/nickklmao/MenuLib/2.4.1/",
     "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/nickklmao-MenuLib-2.4.1.png",
     "channel": "repo",
@@ -41,7 +41,7 @@
   {
     "name": "YMC_MHZ-MoreHead-1.3.11",
     "description": "Customizable cosmetics. 简单好玩的装饰模组，提供unitypackage，供玩家自行导入模型。",
-    "url": "https://thunderstore.io/package/YMC_MHZ/MoreHead/",
+    "url": "https://thunderstore.io/c/repo/p/YMC_MHZ/MoreHead/",
     "download_url": "https://thunderstore.io/package/download/YMC_MHZ/MoreHead/1.3.11/",
     "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/YMC_MHZ-MoreHead-1.3.11.png",
     "channel": "repo",
@@ -54,7 +54,7 @@
   {
     "name": "Zehs-ExtractionPointConfirmButton-1.1.0",
     "description": "Adds a confirm button to extraction points.",
-    "url": "https://thunderstore.io/package/Zehs/ExtractionPointConfirmButton/",
+    "url": "https://thunderstore.io/c/repo/p/Zehs/ExtractionPointConfirmButton/",
     "download_url": "https://thunderstore.io/package/download/Zehs/ExtractionPointConfirmButton/1.1.0/",
     "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/Zehs-ExtractionPointConfirmButton-1.1.0.png",
     "channel": "repo",
@@ -67,7 +67,7 @@
   {
     "name": "Rozza-ShowEnemyHealth-1.0.3",
     "description": "Adds health & damage UI indicators for enemies.",
-    "url": "https://thunderstore.io/package/Rozza/ShowEnemyHealth/",
+    "url": "https://thunderstore.io/c/repo/p/Rozza/ShowEnemyHealth/",
     "download_url": "https://thunderstore.io/package/download/Rozza/ShowEnemyHealth/1.0.3/",
     "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/Rozza-ShowEnemyHealth-1.0.3.png",
     "channel": "repo",
@@ -80,7 +80,7 @@
   {
     "name": "Zehs-LethalCompanyValuables-1.2.1",
     "description": "[INTERACTIONS UPDATE] Adds 30 scrap items from Lethal Company as valuables. Some valuables have special interactions.",
-    "url": "https://thunderstore.io/package/Zehs/LethalCompanyValuables/",
+    "url": "https://thunderstore.io/c/repo/p/Zehs/LethalCompanyValuables/",
     "download_url": "https://thunderstore.io/package/download/Zehs/LethalCompanyValuables/1.2.1/",
     "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/Zehs-LethalCompanyValuables-1.2.1.png",
     "channel": "repo",
@@ -93,7 +93,7 @@
   {
     "name": "Bengimi-BensCosmetics-1.5.5",
     "description": "This is a collection of models I had laying around, plus some that friends threw at me, hopefully people like them, will try my best to give credit.",
-    "url": "https://thunderstore.io/package/Bengimi/BensCosmetics/",
+    "url": "https://thunderstore.io/c/repo/p/Bengimi/BensCosmetics/",
     "download_url": "https://thunderstore.io/package/download/Bengimi/BensCosmetics/1.5.5/",
     "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/Bengimi-BensCosmetics-1.5.5.png",
     "channel": "repo",
@@ -106,7 +106,7 @@
   {
     "name": "s1ckboy-SteampunkItems-1.1.1",
     "description": "Adds [4] Valuables and [1] Item",
-    "url": "https://thunderstore.io/package/s1ckboy/SteampunkItems/",
+    "url": "https://thunderstore.io/c/repo/p/s1ckboy/SteampunkItems/",
     "download_url": "https://thunderstore.io/package/download/s1ckboy/SteampunkItems/1.1.1/",
     "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/s1ckboy-SteampunkItems-1.1.1.png",
     "channel": "repo",
@@ -119,7 +119,7 @@
   {
     "name": "BULLETBOT-MoreUpgrades-1.4.8",
     "description": "Adds more upgrade items to the game, has an library and is highly configurable.",
-    "url": "https://thunderstore.io/package/BULLETBOT/MoreUpgrades/",
+    "url": "https://thunderstore.io/c/repo/p/BULLETBOT/MoreUpgrades/",
     "download_url": "https://thunderstore.io/package/download/BULLETBOT/MoreUpgrades/1.4.8/",
     "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/BULLETBOT-MoreUpgrades-1.4.8.png",
     "channel": "repo",
@@ -132,7 +132,7 @@
   {
     "name": "proferabg-RepoAdminMenu-1.0.8",
     "description": "The best admin menu for R.E.P.O.",
-    "url": "https://thunderstore.io/package/proferabg/RepoAdminMenu/",
+    "url": "https://thunderstore.io/c/repo/p/proferabg/RepoAdminMenu/",
     "download_url": "https://thunderstore.io/package/download/proferabg/RepoAdminMenu/1.0.8/",
     "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/proferabg-RepoAdminMenu-1.0.8.png",
     "channel": "repo",
@@ -145,7 +145,7 @@
   {
     "name": "discjenny-SkipToMenu-1.0.0",
     "description": "Skips the games default loading animations, allowing you to instantly interact with the main menu.",
-    "url": "https://thunderstore.io/package/discjenny/SkipToMenu/",
+    "url": "https://thunderstore.io/c/repo/p/discjenny/SkipToMenu/",
     "download_url": "https://thunderstore.io/package/download/discjenny/SkipToMenu/1.0.0/",
     "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/discjenny-SkipToMenu-1.0.0.png",
     "channel": "repo",
@@ -158,7 +158,7 @@
   {
     "name": "Tansinator-Map_Value_Tracker-1.2.2",
     "description": "Tracks all valuable items on the map. Updates in real-time.",
-    "url": "https://thunderstore.io/package/Tansinator/Map_Value_Tracker/",
+    "url": "https://thunderstore.io/c/repo/p/Tansinator/Map_Value_Tracker/",
     "download_url": "https://thunderstore.io/package/download/Tansinator/Map_Value_Tracker/1.2.2/",
     "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/Tansinator-Map_Value_Tracker-1.2.2.png",
     "channel": "repo",
@@ -171,7 +171,7 @@
   {
     "name": "GalaxyMods-MoreShopItems-1.3.3",
     "description": "The store now carries more items on the shelves!",
-    "url": "https://thunderstore.io/package/GalaxyMods/MoreShopItems/",
+    "url": "https://thunderstore.io/c/repo/p/GalaxyMods/MoreShopItems/",
     "download_url": "https://thunderstore.io/package/download/GalaxyMods/MoreShopItems/1.3.3/",
     "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/GalaxyMods-MoreShopItems-1.3.3.png",
     "channel": "repo",
@@ -184,7 +184,7 @@
   {
     "name": "Zehs-REPOLib-2.0.1",
     "description": "Library for adding content to R.E.P.O.",
-    "url": "https://thunderstore.io/package/Zehs/REPOLib/",
+    "url": "https://thunderstore.io/c/repo/p/Zehs/REPOLib/",
     "download_url": "https://thunderstore.io/package/download/Zehs/REPOLib/2.0.1/",
     "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/Zehs-REPOLib-2.0.1.png",
     "channel": "repo",
@@ -197,7 +197,7 @@
   {
     "name": "DiFFoZ-BepInEx_Faster_Load_AssetBundles_Patcher-1.0.1",
     "description": "Makes start up loading time faster",
-    "url": "https://thunderstore.io/package/DiFFoZ/BepInEx_Faster_Load_AssetBundles_Patcher/",
+    "url": "https://thunderstore.io/c/repo/p/DiFFoZ/BepInEx_Faster_Load_AssetBundles_Patcher/",
     "download_url": "https://thunderstore.io/package/download/DiFFoZ/BepInEx_Faster_Load_AssetBundles_Patcher/1.0.1/",
     "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/DiFFoZ-BepInEx_Faster_Load_AssetBundles_Patcher-1.0.1.png",
     "channel": "repo",
@@ -210,7 +210,7 @@
   {
     "name": "itsUndefined-Shop_Items_Spawn_in_Level-1.7.17",
     "description": "upgrade items may spawn in the level, now you can find upgrades while exploring instead of only being able to purchase them.",
-    "url": "https://thunderstore.io/package/itsUndefined/Shop_Items_Spawn_in_Level/",
+    "url": "https://thunderstore.io/c/repo/p/itsUndefined/Shop_Items_Spawn_in_Level/",
     "download_url": "https://thunderstore.io/package/download/itsUndefined/Shop_Items_Spawn_in_Level/1.7.17/",
     "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/itsUndefined-Shop_Items_Spawn_in_Level-1.7.17.png",
     "channel": "repo",
@@ -223,7 +223,7 @@
   {
     "name": "HopesEradicated-AdjustableGameEconomy-1.1.0",
     "description": "Item prices scale dynamically based on settings, player count, and progression. Adjustments apply to upgrades, health packs, power crystals, and more, with optional cost randomization.",
-    "url": "https://thunderstore.io/package/HopesEradicated/AdjustableGameEconomy/",
+    "url": "https://thunderstore.io/c/repo/p/HopesEradicated/AdjustableGameEconomy/",
     "download_url": "https://thunderstore.io/package/download/HopesEradicated/AdjustableGameEconomy/1.1.0/",
     "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/HopesEradicated-AdjustableGameEconomy-1.1.0.png",
     "channel": "repo",
@@ -236,7 +236,7 @@
   {
     "name": "Snowlance-NoDamageInShop-1.0.1",
     "description": "Take no damage in the shop",
-    "url": "https://thunderstore.io/package/Snowlance/NoDamageInShop/",
+    "url": "https://thunderstore.io/c/repo/p/Snowlance/NoDamageInShop/",
     "download_url": "https://thunderstore.io/package/download/Snowlance/NoDamageInShop/1.0.1/",
     "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/Snowlance-NoDamageInShop-1.0.1.png",
     "channel": "repo",
@@ -249,7 +249,7 @@
   {
     "name": "DaXcess-FixPluginTypesSerialization-1.0.0",
     "description": "Fix custom Serializable structs and such not properly getting deserialized by Unity.",
-    "url": "https://thunderstore.io/package/DaXcess/FixPluginTypesSerialization/",
+    "url": "https://thunderstore.io/c/repo/p/DaXcess/FixPluginTypesSerialization/",
     "download_url": "https://thunderstore.io/package/download/DaXcess/FixPluginTypesSerialization/1.0.0/",
     "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/DaXcess-FixPluginTypesSerialization-1.0.0.png",
     "channel": "repo",
@@ -262,7 +262,7 @@
   {
     "name": "ManancialGD-ChatClipboard-1.0.0",
     "description": "copy and paste chat messages.",
-    "url": "https://thunderstore.io/package/ManancialGD/ChatClipboard/",
+    "url": "https://thunderstore.io/c/repo/p/ManancialGD/ChatClipboard/",
     "download_url": "https://thunderstore.io/package/download/ManancialGD/ChatClipboard/1.0.0/",
     "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/ManancialGD-ChatClipboard-1.0.0.png",
     "channel": "repo",
@@ -275,7 +275,7 @@
   {
     "name": "DirtyGames-DynamicLighting-1.1.0",
     "description": "Dynamic Lighting generates and applies customizable lighting and fog settings for each level. Automatically creates configuration entries for maps & custom ones, allowing you to fine tune ambient lighting, fog density, colors, and more.",
-    "url": "https://thunderstore.io/package/DirtyGames/DynamicLighting/",
+    "url": "https://thunderstore.io/c/repo/p/DirtyGames/DynamicLighting/",
     "download_url": "https://thunderstore.io/package/download/DirtyGames/DynamicLighting/1.1.0/",
     "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/DirtyGames-DynamicLighting-1.1.0.png",
     "channel": "repo",
@@ -288,7 +288,7 @@
   {
     "name": "RisingSons-SonsCosmetics-0.0.9",
     "description": "Cosmetics for me and my friends.",
-    "url": "https://thunderstore.io/package/RisingSons/SonsCosmetics/",
+    "url": "https://thunderstore.io/c/repo/p/RisingSons/SonsCosmetics/",
     "download_url": "https://thunderstore.io/package/download/RisingSons/SonsCosmetics/0.0.9/",
     "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/RisingSons-SonsCosmetics-0.0.9.png",
     "channel": "repo",
@@ -301,7 +301,7 @@
   {
     "name": "nickklmao-PlayerCount-1.0.0",
     "description": "Displays the number of players in your lobby!",
-    "url": "https://thunderstore.io/package/nickklmao/PlayerCount/",
+    "url": "https://thunderstore.io/c/repo/p/nickklmao/PlayerCount/",
     "download_url": "https://thunderstore.io/package/download/nickklmao/PlayerCount/1.0.0/",
     "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/nickklmao-PlayerCount-1.0.0.png",
     "channel": "repo",
@@ -314,7 +314,7 @@
   {
     "name": "Rebateman-LateJoin-0.1.2",
     "description": "Faced with friends that want to join an active game? Gone are the days of closing and re-opening your lobby! Just invite your friends after you've shopped!",
-    "url": "https://thunderstore.io/package/Rebateman/LateJoin/",
+    "url": "https://thunderstore.io/c/repo/p/Rebateman/LateJoin/",
     "download_url": "https://thunderstore.io/package/download/Rebateman/LateJoin/0.1.2/",
     "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/Rebateman-LateJoin-0.1.2.png",
     "channel": "repo",
@@ -327,7 +327,7 @@
   {
     "name": "zombieseatflesh7-ColoredNametags-1.0.0",
     "description": "Colors the nametags based on player color",
-    "url": "https://thunderstore.io/package/zombieseatflesh7/ColoredNametags/",
+    "url": "https://thunderstore.io/c/repo/p/zombieseatflesh7/ColoredNametags/",
     "download_url": "https://thunderstore.io/package/download/zombieseatflesh7/ColoredNametags/1.0.0/",
     "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/zombieseatflesh7-ColoredNametags-1.0.0.png",
     "channel": "repo",
@@ -340,7 +340,7 @@
   {
     "name": "ironbean-LevelNumberUI-1.0.0",
     "description": "Adds text to the HUD that shows the current Level number.",
-    "url": "https://thunderstore.io/package/ironbean/LevelNumberUI/",
+    "url": "https://thunderstore.io/c/repo/p/ironbean/LevelNumberUI/",
     "download_url": "https://thunderstore.io/package/download/ironbean/LevelNumberUI/1.0.0/",
     "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/ironbean-LevelNumberUI-1.0.0.png",
     "channel": "repo",
@@ -353,7 +353,7 @@
   {
     "name": "mattymatty-AsyncLoggers-2.1.4",
     "description": "YEET the logs to their own thread!",
-    "url": "https://thunderstore.io/package/mattymatty/AsyncLoggers/",
+    "url": "https://thunderstore.io/c/repo/p/mattymatty/AsyncLoggers/",
     "download_url": "https://thunderstore.io/package/download/mattymatty/AsyncLoggers/2.1.4/",
     "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/mattymatty-AsyncLoggers-2.1.4.png",
     "channel": "repo",
@@ -366,7 +366,7 @@
   {
     "name": "Flopper-ImprovedStamina-1.2.0",
     "description": "Enhances the stamina regeneration system in the game.",
-    "url": "https://thunderstore.io/package/Flopper/ImprovedStamina/",
+    "url": "https://thunderstore.io/c/repo/p/Flopper/ImprovedStamina/",
     "download_url": "https://thunderstore.io/package/download/Flopper/ImprovedStamina/1.2.0/",
     "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/Flopper-ImprovedStamina-1.2.0.png",
     "channel": "repo",
@@ -379,7 +379,7 @@
   {
     "name": "nickklmao-NoLimitChatbox-1.0.1",
     "description": "yap yap yap yap yap",
-    "url": "https://thunderstore.io/package/nickklmao/NoLimitChatbox/",
+    "url": "https://thunderstore.io/c/repo/p/nickklmao/NoLimitChatbox/",
     "download_url": "https://thunderstore.io/package/download/nickklmao/NoLimitChatbox/1.0.1/",
     "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/nickklmao-NoLimitChatbox-1.0.1.png",
     "channel": "repo",
@@ -392,7 +392,7 @@
   {
     "name": "zelofi-MorePlayers-1.0.4",
     "description": "Allows you to decrease or increase the max player cap.",
-    "url": "https://thunderstore.io/package/zelofi/MorePlayers/",
+    "url": "https://thunderstore.io/c/repo/p/zelofi/MorePlayers/",
     "download_url": "https://thunderstore.io/package/download/zelofi/MorePlayers/1.0.4/",
     "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/zelofi-MorePlayers-1.0.4.png",
     "channel": "repo",
