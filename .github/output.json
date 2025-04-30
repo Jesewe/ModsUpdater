@@ -1,5 +1,18 @@
 [
   {
+    "name": "HopesEradicated-AdjustableGameEconomy-1.2.0",
+    "description": "Item prices scale dynamically based on settings, player count, and progression. Adjustments apply to upgrades, health packs, power crystals, and more, with optional cost randomization.",
+    "url": "https://thunderstore.io/c/repo/p/HopesEradicated/AdjustableGameEconomy/",
+    "download_url": "https://thunderstore.io/package/download/HopesEradicated/AdjustableGameEconomy/1.2.0/",
+    "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/HopesEradicated-AdjustableGameEconomy-1.2.0.png",
+    "channel": "repo",
+    "owner": "HopesEradicated",
+    "package": "AdjustableGameEconomy",
+    "version": "1.2.0",
+    "date_updated": "2025-04-29, 13:31:57",
+    "full_name": "HopesEradicated-AdjustableGameEconomy-1.2.0"
+  },
+  {
     "name": "Zehs-REPOLib-2.1.0",
     "description": "Library for adding content to R.E.P.O.",
     "url": "https://thunderstore.io/c/repo/p/Zehs/REPOLib/",
@@ -219,19 +232,6 @@
     "version": "1.7.17",
     "date_updated": "2025-03-30, 09:35:50",
     "full_name": "itsUndefined-Shop_Items_Spawn_in_Level-1.7.17"
-  },
-  {
-    "name": "HopesEradicated-AdjustableGameEconomy-1.1.0",
-    "description": "Item prices scale dynamically based on settings, player count, and progression. Adjustments apply to upgrades, health packs, power crystals, and more, with optional cost randomization.",
-    "url": "https://thunderstore.io/c/repo/p/HopesEradicated/AdjustableGameEconomy/",
-    "download_url": "https://thunderstore.io/package/download/HopesEradicated/AdjustableGameEconomy/1.1.0/",
-    "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/HopesEradicated-AdjustableGameEconomy-1.1.0.png",
-    "channel": "repo",
-    "owner": "HopesEradicated",
-    "package": "AdjustableGameEconomy",
-    "version": "1.1.0",
-    "date_updated": "2025-03-25, 08:08:32",
-    "full_name": "HopesEradicated-AdjustableGameEconomy-1.1.0"
   },
   {
     "name": "Snowlance-NoDamageInShop-1.0.1",
