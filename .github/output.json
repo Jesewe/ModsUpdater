@@ -1,5 +1,18 @@
 [
   {
+    "name": "proferabg-RepoAdminMenu-1.0.9",
+    "description": "The best admin menu for R.E.P.O.",
+    "url": "https://thunderstore.io/c/repo/p/proferabg/RepoAdminMenu/",
+    "download_url": "https://thunderstore.io/package/download/proferabg/RepoAdminMenu/1.0.9/",
+    "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/proferabg-RepoAdminMenu-1.0.9.png",
+    "channel": "repo",
+    "owner": "proferabg",
+    "package": "RepoAdminMenu",
+    "version": "1.0.9",
+    "date_updated": "2025-05-03, 01:49:40",
+    "full_name": "proferabg-RepoAdminMenu-1.0.9"
+  },
+  {
     "name": "HopesEradicated-AdjustableGameEconomy-1.2.0",
     "description": "Item prices scale dynamically based on settings, player count, and progression. Adjustments apply to upgrades, health packs, power crystals, and more, with optional cost randomization.",
     "url": "https://thunderstore.io/c/repo/p/HopesEradicated/AdjustableGameEconomy/",
@@ -154,19 +167,6 @@
     "version": "1.4.8",
     "date_updated": "2025-04-14, 17:50:50",
     "full_name": "BULLETBOT-MoreUpgrades-1.4.8"
-  },
-  {
-    "name": "proferabg-RepoAdminMenu-1.0.8",
-    "description": "The best admin menu for R.E.P.O.",
-    "url": "https://thunderstore.io/c/repo/p/proferabg/RepoAdminMenu/",
-    "download_url": "https://thunderstore.io/package/download/proferabg/RepoAdminMenu/1.0.8/",
-    "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/proferabg-RepoAdminMenu-1.0.8.png",
-    "channel": "repo",
-    "owner": "proferabg",
-    "package": "RepoAdminMenu",
-    "version": "1.0.8",
-    "date_updated": "2025-04-14, 01:09:59",
-    "full_name": "proferabg-RepoAdminMenu-1.0.8"
   },
   {
     "name": "discjenny-SkipToMenu-1.0.0",
