@@ -1,5 +1,18 @@
 [
   {
+    "name": "zelofi-MorePlayers-1.0.5",
+    "description": "Allows you to decrease or increase the max player cap.",
+    "url": "https://thunderstore.io/c/repo/p/zelofi/MorePlayers/",
+    "download_url": "https://thunderstore.io/package/download/zelofi/MorePlayers/1.0.5/",
+    "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/zelofi-MorePlayers-1.0.5.png",
+    "channel": "repo",
+    "owner": "zelofi",
+    "package": "MorePlayers",
+    "version": "1.0.5",
+    "date_updated": "2025-05-06, 04:52:16",
+    "full_name": "zelofi-MorePlayers-1.0.5"
+  },
+  {
     "name": "Lazarus-NoGunSpread-1.0.3",
     "description": "Removes the inaccurate bullet spread from all guns!",
     "url": "https://thunderstore.io/c/repo/p/Lazarus/NoGunSpread/",
@@ -401,18 +414,5 @@
     "version": "1.0.1",
     "date_updated": "2025-03-02, 12:05:10",
     "full_name": "nickklmao-NoLimitChatbox-1.0.1"
-  },
-  {
-    "name": "zelofi-MorePlayers-1.0.4",
-    "description": "Allows you to decrease or increase the max player cap.",
-    "url": "https://thunderstore.io/c/repo/p/zelofi/MorePlayers/",
-    "download_url": "https://thunderstore.io/package/download/zelofi/MorePlayers/1.0.4/",
-    "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/zelofi-MorePlayers-1.0.4.png",
-    "channel": "repo",
-    "owner": "zelofi",
-    "package": "MorePlayers",
-    "version": "1.0.4",
-    "date_updated": "2025-02-27, 22:16:28",
-    "full_name": "zelofi-MorePlayers-1.0.4"
   }
 ]
