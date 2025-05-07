@@ -1,16 +1,17 @@
-## Overview
-
-This Python script automatically retrieves information about the latest versions of mods (modifications) from Thunderstore.io, formats the results, and displays them in the console. It can also save the data to a JSON file and send a summary to Telegram.
+This Python script automatically retrieves information about the latest versions of mods (modifications) from Thunderstore.io, detects which mods have been updated since the last run, formats the results, and displays them in the console. It can also save the data to a JSON file and send detailed notifications to Telegram.
 
 ## Installation
 
 1. Clone the repository.
 2. Ensure you have Python 3.7 or newer installed.
 3. Install dependencies:
+
    ```bash
    pip install -r requirements.txt
    ```
+
    The `requirements.txt` should contain:
+
    ```text
    requests
    colorama
@@ -19,10 +20,10 @@ This Python script automatically retrieves information about the latest versions
 
 ## Environment Variables
 
-Use a `.env` file (loaded via `python-dotenv`) to configure:
+Configure a `.env` file (loaded via `python-dotenv`) with the following variables:
 
 - `TELEGRAM_BOT_TOKEN` — Telegram bot token for sending messages.
-- `TELEGRAM_CHAT_ID` — Chat ID where the summary will be sent.
+- `TELEGRAM_CHAT_ID` — Chat ID where the notifications will be sent.
 
 Example `.env`:
 
@@ -41,78 +42,72 @@ python main.py [--mods-url URL] [--output OUTPUT_FILE] [--full-output] [--send-t
 
 - `--mods-url` — URL of the JSON file containing the list of mods (default: `https://mods-guerra.netlify.app/mods.json`).
 - `--output`, `-o` — Path to save the result in JSON format.
-- `--full-output` — Display all available fields for each mod (name, description, URL, download URL, icon URL, channel, owner, package, version, date updated, full name).
-- `--send-telegram` — Send a summary message to Telegram.
+- `--full-output` — Include all available fields for each mod in the console output.
+- `--send-telegram` — Send a Telegram notification listing updated mods.
 
 ## Core Components
 
-### Functions
+### `load_previous_output() -> Dict[str, str]`
 
-#### `parse_mod_url(url: str) -> Dict[str, str]`
+Downloads the previous run's output JSON from the GitHub repository and returns a mapping of `mod_name -> version`. If the file cannot be fetched, an empty map is returned.
 
-Parses a Thunderstore mod URL and extracts:
+### `fetch_all_updates(mods_url: str, max_workers: int = 5) -> List[Dict]`
 
-- `channel` (e.g., `c/repo`),
-- `owner` (repository owner),
-- `package` (package name).
+1. Downloads the JSON file at `mods_url`, which contains an array of mods with their Thunderstore URLs.
+2. Parses each URL to extract `channel`, `owner`, and `package`.
+3. Queries the Thunderstore API in parallel to retrieve the latest version info for each mod.
+4. Sorts the results by update date in descending order.
 
-Raises `ValueError` if the URL does not match the expected pattern.
+Returns a list of dictionaries each containing:
 
-```python
-parsed = parse_mod_url("https://thunderstore.io/c/repo/p/owner/package/")
-# {'channel': 'repo', 'owner': 'owner', 'package': 'package'}
-```
+- `name`: Full mod name.
+- `version`: Latest version string.
+- `date_updated`: Formatted timestamp of last update.
+- `url`: Direct link to the mod page.
 
-#### `get_latest_mod_info(channel: str, owner: str, package: str) -> Dict`
+### `compute_updates(new_data: List[Dict], prev_versions: Dict[str, str]) -> List[str]`
 
-Requests `https://thunderstore.io/api/experimental/package/{owner}/{package}/` and returns detailed information about the latest release, including:
+Compares the newly fetched data with the previously stored versions and returns a list of mod names that have changed (i.e., new or updated mods).
 
-- `name`, `description`, `version`, `date_updated`,
-- `url`, `download_url`, `icon_url`,
-- internal fields `channel`, `owner`, `package`.
+### `print_table(updates: List[Dict], full: bool = False)`
 
-#### `fetch_all_updates(mods_url: str, max_workers: int = 5) -> List[Dict]`
+Prints a formatted console table of mod data.
 
-1. Downloads a JSON file from `mods_url` containing a list of mods.
-2. Uses a `ThreadPoolExecutor` to fetch latest release info for each mod in parallel.
-3. Sorts the resulting list by update date in descending order.
+- **Summary mode** (`full=False`): Columns: `Name`, `Version`, `Date Updated`, `URL`.
+- **Full mode** (`full=True`): Same columns, but designed to expand if more fields are added.
 
-Returns a list of dictionaries with the fields returned by `get_latest_mod_info`.
+Uses `colorama` to colorize headers and highlight missing updates.
 
-#### `print_table(updates: List[Dict], full: bool = False)`
+### `send_telegram(updated: List[str])`
 
-Prints the update information in a console table:
+Sends a Telegram message:
 
-- Summary mode (`full=False`): `Name`, `Version`, `Date Updated`, `URL`.
-- Full mode (`full=True`): all available fields.
-
-Uses `colorama` to highlight the headers.
-
-#### `send_telegram(received: int, total: int)`
-
-Sends a Telegram message summarizing the number of mods processed:
-
-```
-Received {received} out of {total} mods from Thunderstore.
-```
+- If `updated` is non-empty, lists each updated mod on a separate line.
+- If empty, sends "No mod updates detected."
 
 Relies on `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` environment variables.
 
 ## Usage Examples
 
-1. **Print a summary to the console**:
+1. **Display summary in console**:
 
    ```bash
    python main.py
    ```
 
-2. **Save summary to a file**:
+2. **Save summary to JSON file**:
 
    ```bash
    python main.py --output mods_summary.json
    ```
 
-3. **Full output and send summary to Telegram**:
+3. **Detect changes and send Telegram notification**:
+
+   ```bash
+   python main.py --send-telegram
+   ```
+
+4. **Full output with detailed fields and notification**:
 
    ```bash
    python main.py --full-output --send-telegram
@@ -120,12 +115,13 @@ Relies on `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` environment variables.
 
 ## Logging
 
-Uses Python's standard `logging` module:
+The script uses Python's built-in `logging` module:
 
-- Default level: `INFO`.
-- Warnings for URL parsing errors and HTTP request failures are logged.
+- **Level**: `INFO` by default.
+- **Warnings**: Invalid URLs or failed HTTP requests.
+- **Errors**: Failed API calls or missing environment variables.
 
 ## Error Handling
 
-- **HTTP**: raises `HTTPError` on request failures.
-- **URL Parsing**: invalid URLs are skipped with a logged `warning`.
+- **HTTP Errors**: Raises `HTTPError` on non-successful responses.
+- **URL Parsing**: Invalid mod URLs are skipped with a logged warning.
