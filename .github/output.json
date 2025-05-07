@@ -52,6 +52,19 @@
     "full_name": "proferabg-RepoAdminMenu-1.0.9"
   },
   {
+    "name": "LucydDemon-DisableItemsInShop-1.4.0",
+    "description": "Disables using items in the shop (& lobby). Fully customizable",
+    "url": "https://thunderstore.io/c/repo/p/LucydDemon/DisableItemsInShop/",
+    "download_url": "https://thunderstore.io/package/download/LucydDemon/DisableItemsInShop/1.4.0/",
+    "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/LucydDemon-DisableItemsInShop-1.4.0.png",
+    "channel": "repo",
+    "owner": "LucydDemon",
+    "package": "DisableItemsInShop",
+    "version": "1.4.0",
+    "date_updated": "2025-05-01, 08:31:02",
+    "full_name": "LucydDemon-DisableItemsInShop-1.4.0"
+  },
+  {
     "name": "HopesEradicated-AdjustableGameEconomy-1.2.0",
     "description": "Item prices scale dynamically based on settings, player count, and progression. Adjustments apply to upgrades, health packs, power crystals, and more, with optional cost randomization.",
     "url": "https://thunderstore.io/c/repo/p/HopesEradicated/AdjustableGameEconomy/",
