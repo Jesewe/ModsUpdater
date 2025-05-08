@@ -64,14 +64,29 @@ def get_latest_mod_info(channel: str, owner: str, package: str) -> Dict:
     except Exception:
         formatted_date = raw_date
 
+    # Additional fields for full output
+    description = latest.get("description", "")
+    icon_url = latest.get("icon", "")
+    full_name = latest.get("full_name", "")
+
+    # Correct download URL from API
+    download_url = latest.get("download_url")
+    # Package page URL from API data or fallback
+    page_url = f"https://thunderstore.io/c/{channel}/p/{owner}/{package}/"
+
     return {
-        "name": latest.get("full_name") or f"{owner}/{package}",
+        "name": full_name or f"{owner}/{package}",
+        "description": description,
+        "url": page_url,
+        "download_url": download_url,
+        "icon_url": icon_url,
+        "channel": channel,
+        "owner": owner,
+        "package": package,
         "version": version,
         "date_updated": formatted_date,
-        "url": (
-            f"https://thunderstore.io/c/{channel}/p/{owner}/{package}/"
-        ),
-        "raw_date": raw_date,
+        "full_name": full_name,
+        "raw_date": raw_date
     }
 
 
@@ -149,8 +164,20 @@ def print_table(updates: List[Dict], full: bool = False):
         return
 
     if full:
-        headers = ["Name", "Version", "Date Updated", "URL"]
-        rows = [[u.get("name"), u.get("version"), u.get("date_updated"), u.get("url")] for u in updates]
+        headers = ["Name", "Description", "URL", "Download URL", "Icon URL", "Channel", "Owner", "Package", "Version", "Date Updated", "Full Name"]
+        rows = [[
+            u.get("name", ""),
+            u.get("description", ""),
+            u.get("url", ""),
+            u.get("download_url", ""),
+            u.get("icon_url", ""),
+            u.get("channel", ""),
+            u.get("owner", ""),
+            u.get("package", ""),
+            u.get("version", ""),
+            u.get("date_updated", ""),
+            u.get("full_name", "")
+        ] for u in updates]
     else:
         headers = ["Name", "Version", "Date Updated", "URL"]
         rows = [[u.get("name"), u.get("version"), u.get("date_updated"), u.get("url")] for u in updates]
