@@ -28,6 +28,34 @@
     "raw_date": "2025-05-08T01:57:11.215671Z"
   },
   {
+    "name": "Lluciocc-GamblingMachine-1.0.5",
+    "description": "Gambling Machine in shop and earn reward !!",
+    "url": "https://thunderstore.io/c/repo/p/Lluciocc/GamblingMachine/",
+    "download_url": "https://thunderstore.io/package/download/Lluciocc/GamblingMachine/1.0.5/",
+    "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/Lluciocc-GamblingMachine-1.0.5.png",
+    "channel": "repo",
+    "owner": "Lluciocc",
+    "package": "GamblingMachine",
+    "version": "1.0.5",
+    "date_updated": "2025-05-07, 20:22:24",
+    "full_name": "Lluciocc-GamblingMachine-1.0.5",
+    "raw_date": "2025-05-07T20:22:24.412272Z"
+  },
+  {
+    "name": "Nilaier-L_A_T_E-1.1.0",
+    "description": "Let friends late join your game anytime!",
+    "url": "https://thunderstore.io/c/repo/p/Nilaier/L_A_T_E/",
+    "download_url": "https://thunderstore.io/package/download/Nilaier/L_A_T_E/1.1.0/",
+    "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/Nilaier-L_A_T_E-1.1.0.png",
+    "channel": "repo",
+    "owner": "Nilaier",
+    "package": "L_A_T_E",
+    "version": "1.1.0",
+    "date_updated": "2025-05-07, 18:30:58",
+    "full_name": "Nilaier-L_A_T_E-1.1.0",
+    "raw_date": "2025-05-07T18:30:58.640204Z"
+  },
+  {
     "name": "zelofi-MorePlayers-1.0.5",
     "description": "Allows you to decrease or increase the max player cap.",
     "url": "https://thunderstore.io/c/repo/p/zelofi/MorePlayers/",
@@ -376,20 +404,6 @@
     "date_updated": "2025-03-13, 01:20:41",
     "full_name": "nickklmao-PlayerCount-1.0.0",
     "raw_date": "2025-03-13T01:20:41.791303Z"
-  },
-  {
-    "name": "Rebateman-LateJoin-0.1.2",
-    "description": "Faced with friends that want to join an active game? Gone are the days of closing and re-opening your lobby! Just invite your friends after you've shopped!",
-    "url": "https://thunderstore.io/c/repo/p/Rebateman/LateJoin/",
-    "download_url": "https://thunderstore.io/package/download/Rebateman/LateJoin/0.1.2/",
-    "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/Rebateman-LateJoin-0.1.2.png",
-    "channel": "repo",
-    "owner": "Rebateman",
-    "package": "LateJoin",
-    "version": "0.1.2",
-    "date_updated": "2025-03-12, 00:18:38",
-    "full_name": "Rebateman-LateJoin-0.1.2",
-    "raw_date": "2025-03-12T00:18:38.380669Z"
   },
   {
     "name": "zombieseatflesh7-ColoredNametags-1.0.0",
