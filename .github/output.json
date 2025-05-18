@@ -28,20 +28,6 @@
     "raw_date": "2025-05-08T01:57:11.215671Z"
   },
   {
-    "name": "Lluciocc-GamblingMachine-1.0.5",
-    "description": "Gambling Machine in shop and earn reward !!",
-    "url": "https://thunderstore.io/c/repo/p/Lluciocc/GamblingMachine/",
-    "download_url": "https://thunderstore.io/package/download/Lluciocc/GamblingMachine/1.0.5/",
-    "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/Lluciocc-GamblingMachine-1.0.5.png",
-    "channel": "repo",
-    "owner": "Lluciocc",
-    "package": "GamblingMachine",
-    "version": "1.0.5",
-    "date_updated": "2025-05-07, 20:22:24",
-    "full_name": "Lluciocc-GamblingMachine-1.0.5",
-    "raw_date": "2025-05-07T20:22:24.412272Z"
-  },
-  {
     "name": "Nilaier-L_A_T_E-1.1.0",
     "description": "Let friends late join your game anytime!",
     "url": "https://thunderstore.io/c/repo/p/Nilaier/L_A_T_E/",
@@ -292,20 +278,6 @@
     "date_updated": "2025-04-06, 22:07:34",
     "full_name": "GalaxyMods-MoreShopItems-1.3.3",
     "raw_date": "2025-04-06T22:07:34.001502Z"
-  },
-  {
-    "name": "DiFFoZ-BepInEx_Faster_Load_AssetBundles_Patcher-1.0.1",
-    "description": "Makes start up loading time faster",
-    "url": "https://thunderstore.io/c/repo/p/DiFFoZ/BepInEx_Faster_Load_AssetBundles_Patcher/",
-    "download_url": "https://thunderstore.io/package/download/DiFFoZ/BepInEx_Faster_Load_AssetBundles_Patcher/1.0.1/",
-    "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/DiFFoZ-BepInEx_Faster_Load_AssetBundles_Patcher-1.0.1.png",
-    "channel": "repo",
-    "owner": "DiFFoZ",
-    "package": "BepInEx_Faster_Load_AssetBundles_Patcher",
-    "version": "1.0.1",
-    "date_updated": "2025-04-02, 16:40:22",
-    "full_name": "DiFFoZ-BepInEx_Faster_Load_AssetBundles_Patcher-1.0.1",
-    "raw_date": "2025-04-02T16:40:22.601488Z"
   },
   {
     "name": "itsUndefined-Shop_Items_Spawn_in_Level-1.7.17",
