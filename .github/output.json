@@ -1,5 +1,19 @@
 [
   {
+    "name": "ironbean-LevelNumberUI-1.0.1",
+    "description": "Adds text to the HUD that shows the current Level number.",
+    "url": "https://thunderstore.io/c/repo/p/ironbean/LevelNumberUI/",
+    "download_url": "https://thunderstore.io/package/download/ironbean/LevelNumberUI/1.0.1/",
+    "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/ironbean-LevelNumberUI-1.0.1.png",
+    "channel": "repo",
+    "owner": "ironbean",
+    "package": "LevelNumberUI",
+    "version": "1.0.1",
+    "date_updated": "2025-05-20, 22:02:43",
+    "full_name": "ironbean-LevelNumberUI-1.0.1",
+    "raw_date": "2025-05-20T22:02:43.153801Z"
+  },
+  {
     "name": "proferabg-RepoAdminMenu-1.0.10",
     "description": "The best admin menu for R.E.P.O.",
     "url": "https://thunderstore.io/c/repo/p/proferabg/RepoAdminMenu/",
@@ -390,20 +404,6 @@
     "date_updated": "2025-03-11, 11:02:42",
     "full_name": "zombieseatflesh7-ColoredNametags-1.0.0",
     "raw_date": "2025-03-11T11:02:42.886810Z"
-  },
-  {
-    "name": "ironbean-LevelNumberUI-1.0.0",
-    "description": "Adds text to the HUD that shows the current Level number.",
-    "url": "https://thunderstore.io/c/repo/p/ironbean/LevelNumberUI/",
-    "download_url": "https://thunderstore.io/package/download/ironbean/LevelNumberUI/1.0.0/",
-    "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/ironbean-LevelNumberUI-1.0.0.png",
-    "channel": "repo",
-    "owner": "ironbean",
-    "package": "LevelNumberUI",
-    "version": "1.0.0",
-    "date_updated": "2025-03-11, 01:03:48",
-    "full_name": "ironbean-LevelNumberUI-1.0.0",
-    "raw_date": "2025-03-11T01:03:48.463915Z"
   },
   {
     "name": "mattymatty-AsyncLoggers-2.1.4",
