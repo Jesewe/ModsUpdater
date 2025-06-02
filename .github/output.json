@@ -1,5 +1,19 @@
 [
   {
+    "name": "HopesEradicated-AdjustableGameEconomy-1.3.1",
+    "description": "Item prices scale dynamically based on settings, player count, and progression. Adjustments apply to upgrades, health packs, power crystals, and more, with optional cost randomization.",
+    "url": "https://thunderstore.io/c/repo/p/HopesEradicated/AdjustableGameEconomy/",
+    "download_url": "https://thunderstore.io/package/download/HopesEradicated/AdjustableGameEconomy/1.3.1/",
+    "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/HopesEradicated-AdjustableGameEconomy-1.3.1.png",
+    "channel": "repo",
+    "owner": "HopesEradicated",
+    "package": "AdjustableGameEconomy",
+    "version": "1.3.1",
+    "date_updated": "2025-06-01, 13:45:10",
+    "full_name": "HopesEradicated-AdjustableGameEconomy-1.3.1",
+    "raw_date": "2025-06-01T13:45:10.130303Z"
+  },
+  {
     "name": "s1ckboy-SteampunkItems-1.1.3",
     "description": "Adds [6] Valuables and [1] Item",
     "url": "https://thunderstore.io/c/repo/p/s1ckboy/SteampunkItems/",
@@ -124,20 +138,6 @@
     "date_updated": "2025-05-01, 08:31:02",
     "full_name": "LucydDemon-DisableItemsInShop-1.4.0",
     "raw_date": "2025-05-01T08:31:02.634696Z"
-  },
-  {
-    "name": "HopesEradicated-AdjustableGameEconomy-1.2.0",
-    "description": "Item prices scale dynamically based on settings, player count, and progression. Adjustments apply to upgrades, health packs, power crystals, and more, with optional cost randomization.",
-    "url": "https://thunderstore.io/c/repo/p/HopesEradicated/AdjustableGameEconomy/",
-    "download_url": "https://thunderstore.io/package/download/HopesEradicated/AdjustableGameEconomy/1.2.0/",
-    "icon_url": "https://gcdn.thunderstore.io/live/repository/icons/HopesEradicated-AdjustableGameEconomy-1.2.0.png",
-    "channel": "repo",
-    "owner": "HopesEradicated",
-    "package": "AdjustableGameEconomy",
-    "version": "1.2.0",
-    "date_updated": "2025-04-29, 13:31:57",
-    "full_name": "HopesEradicated-AdjustableGameEconomy-1.2.0",
-    "raw_date": "2025-04-29T13:31:57.588575Z"
   },
   {
     "name": "Zehs-REPOLib-2.1.0",
